@@ -35,7 +35,7 @@ def calculate_normalised_risk_score(medical_history):
 # it can be given to model
 def preprocess_input(input_dict):
     expected_columns=['age', 'number_of_dependants', 'income_lakhs', 'insurance_plan',
-       'genetic_risk', 'normalized_risk_score', 'gender_Male',
+       'genetical_risk', 'normalized_risk_score', 'gender_Male',
        'region_Northwest', 'region_Southeast', 'region_Southwest',
        'marital_status_Unmarried', 'bmi_category_Obesity',
        'bmi_category_Overweight', 'bmi_category_Underweight',
@@ -85,7 +85,7 @@ def preprocess_input(input_dict):
         elif key=='Income in Lakhs':
             df['income_lakhs']=value
         elif key=='Genetical Risk':
-            df['genetic_risk']=value
+            df['genetical_risk']=value
 
     df['normalized_risk_score']=calculate_normalised_risk_score(input_dict['Medical History'])
     df=handle_scaling(input_dict['Age'],df)

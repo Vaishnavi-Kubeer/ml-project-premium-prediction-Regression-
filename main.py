@@ -34,7 +34,7 @@ with row1[2]:
     income_lakhs = st.number_input('Income in Lakhs', step=1, min_value=0, max_value=200)
 
 with row2[0]:
-    genetical_risk = st.number_input('Genetical Risk', step=1, min_value=0, max_value=5)
+    genetic_risk = st.number_input('Genetical Risk', step=1, min_value=0, max_value=5)
 with row2[1]:
     insurance_plan = st.selectbox('Insurance Plan', categorical_options['Insurance Plan'])
 with row2[2]:
@@ -58,7 +58,7 @@ input_dict = {
     'Age': age,
     'Number of Dependants': number_of_dependants,
     'Income in Lakhs': income_lakhs,
-    'Genetical Risk': genetical_risk,
+    'Genetical Risk': genetic_risk,
     'Insurance Plan': insurance_plan,
     'Employment Status': employment_status,
     'Gender': gender,
